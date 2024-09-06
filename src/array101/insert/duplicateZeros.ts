@@ -1,3 +1,5 @@
+//продублируйте каждое вхождение нуля, сдвигая оставшиеся элементы вправо.
+
 function duplicateZeros(arr: number[]) {
   const length = arr.length;
   arr = arr.reduce((acc: number[], current, i, array) => {
