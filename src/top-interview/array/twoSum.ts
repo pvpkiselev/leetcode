@@ -1,13 +1,16 @@
-function twoSum(nums: number[], target: number): number[] {
-  const map: { [key: number]: number } = {};
+function twoSum(nums, target) {
+  const map = new Map(); // Хранилище для чисел и их индексов
+
   for (let i = 0; i < nums.length; i++) {
-    if (map.hasOwnProperty(target - nums[i])) {
-      return [map[target - nums[i]], i];
+    const complement = target - nums[i]; // Число, которое нужно найти
+
+    if (map.has(complement)) {
+      return [map.get(complement), i]; // Возвращаем индексы пары
     }
-    map[nums[i]] = i;
+
+    map.set(nums[i], i); // Сохраняем текущее число и его индекс
   }
 
-  return [];
+  return []; // Если ничего не найдено
 }
-
 console.log(twoSum([6, 6, 2, 4], 12));

@@ -36,13 +36,17 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "alwaysStrict": false,
-    "allowUnreachableCode": true,
+
+    /* Possible improvements */
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+
     "allowJs": true,
     "moduleDetection": "force",
     "strictPropertyInitialization": true,
     "strictFunctionTypes": true,
     "sourceMap": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "src/tests/myPolofills.js"],
+  "exclude": ["src/**/*.js"]
 }
