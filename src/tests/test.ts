@@ -18,7 +18,7 @@ export const getAllItems = (item: Item): string[] => {
   }
 
   if (child) {
-    for (let i of child) {
+    for (const i of child) {
       result.push(...getAllItems(i));
     }
   }

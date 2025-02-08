@@ -47,6 +47,6 @@
     "strictFunctionTypes": true,
     "sourceMap": true
   },
-  "include": ["src/**/*.ts", "src/tests/myPolofills.js"],
+  "include": ["src/**/*.ts", "src/tests/myPolifills.js", "src/tests/linkedList.js"],
   "exclude": ["src/**/*.js"]
 }

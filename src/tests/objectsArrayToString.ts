@@ -23,7 +23,7 @@ function objectsToString(objects, types) {
   let resultString = '';
 
   for (let i = 0; i < objects.length; i++) {
-    if (types[objects[i].object_type - 1].class === 'Устройства') {
+    if (types[objects[i].object_type].class === 'Устройства') {
       resultString += objects[i].name + ', ';
     }
   }

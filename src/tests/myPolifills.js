@@ -177,6 +177,9 @@ if (!Array.prototype.myBubbleSort) {
   };
 }
 
+// console.log([1, 2, 3].myBubbleSort());
+// console.log([1, 2, 3].myBubbleSort((a, b) => b - a));
+
 // Array.prototype.myQuickSort
 if (!Array.prototype.myQuickSort) {
   Array.prototype.myQuickSort = function (compareFn) {
