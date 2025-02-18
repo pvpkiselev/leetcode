@@ -1,15 +1,15 @@
-// const fib2 = (n) => {
-//   if (n === 0) {
-//     return [0, 1];
-//   } else {
-//     const [prev, next] = fib2(n - 1);
-//     return [next, prev + next];
-//   }
-// };
+const fibRec = (n) => {
+  if (n === 0) {
+    return [0, 1];
+  } else {
+    const [prev, next] = fibRec(n - 1);
+    return [next, prev + next];
+  }
+};
 
-// const fib = (n) => fib2(n)[0];
+const fib = (n) => fibRec(n)[0];
 
-const fib = (n) => {
+const fibLoop = (n) => {
   let prev = 0;
   let next = 1;
 
@@ -22,4 +22,14 @@ const fib = (n) => {
   return prev;
 };
 
-console.log(fib(1));
+console.log(fibLoop(1));
+
+const fibRecLoose = (n) => {
+  if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  } else {
+    return fibRecLoose(n - 1) + fibRecLoose(n - 2);
+  }
+}

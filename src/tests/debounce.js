@@ -12,44 +12,44 @@ function easyDebounce(func, delay) {
   };
 }
 
-function hardDebounce(func, delay, options = {}) {
-  let timeoutId;
-  const { leading = false } = options;
+// function hardDebounce(func, delay, options = {}) {
+//   let timeoutId;
+//   const { leading = false } = options;
 
-  function debounced(...args) {
-    const shouldCallNow = leading && !timeoutId;
+//   function debounced(...args) {
+//     const shouldCallNow = leading && !timeoutId;
 
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
+//     if (timeoutId) {
+//       clearTimeout(timeoutId);
+//     }
 
-    timeoutId = setTimeout(() => {
-      timeoutId = null;
+//     timeoutId = setTimeout(() => {
+//       timeoutId = null;
 
-      if (leading) {
-        func.apply(this, args);
-      }
-    }, delay);
+//       if (leading) {
+//         func.apply(this, args);
+//       }
+//     }, delay);
 
-    if (shouldCallNow) {
-      func.apply(this, args);
-    }
-  }
+//     if (shouldCallNow) {
+//       func.apply(this, args);
+//     }
+//   }
 
-  debounced.cancel = () => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-      timeoutId = null;
-    }
-  };
+//   debounced.cancel = () => {
+//     if (timeoutId) {
+//       clearTimeout(timeoutId);
+//       timeoutId = null;
+//     }
+//   };
 
-  debounced.flush = () => {
-    if (timeoutId) {
-      func.apply(this, args);
-      clearTimeout(timeoutId);
-      timeoutId = null;
-    }
-  };
+//   debounced.flush = () => {
+//     if (timeoutId) {
+//       func.apply(this, args);
+//       clearTimeout(timeoutId);
+//       timeoutId = null;
+//     }
+//   };
 
-  return debounced;
-}
+//   return debounced;
+// }
