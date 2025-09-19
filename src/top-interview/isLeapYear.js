@@ -4,10 +4,11 @@
 
 // Функция принимает номер года в качестве параметра. Если год високосный, то функция должна вернуть true, в противном случае false.
 
-function isLeapYear(year) {
-    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 
-}
+// function isLeapYear(year) {
+//     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 
+// }
 
-console.log(isLeapYear(2020)) // true
-console.log(isLeapYear(2000)) // true
-console.log(isLeapYear(2100)) // false
+// console.log(isLeapYear(2020)) // true
+// console.log(isLeapYear(2000)) // true
+// console.log(isLeapYear(2100)) // false
+

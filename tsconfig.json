@@ -47,6 +47,6 @@
     "strictFunctionTypes": true,
     "sourceMap": true
   },
-  "include": ["src/**/*.ts", "src/tests/myPolifills.js", "src/tests/linkedList.js"],
+  "include": ["src/**/*.ts", "src/tests/myPolifills.js", "src/tests/linkedList.js", "src/array101/delete/removeDuplicates.ts", "src/top-interview/array/rotateArray.js"],
   "exclude": ["src/**/*.js"]
 }

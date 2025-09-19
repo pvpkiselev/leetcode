@@ -8,7 +8,6 @@ function isBalanced(str) {
 
   for (let char of str) {
     if (brackets[char]) {
-      console.log(brackets[char]);
       stack.push(char);
     } else {
       const lastBracket = stack.pop();

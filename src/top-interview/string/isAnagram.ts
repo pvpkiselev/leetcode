@@ -13,7 +13,7 @@ function isAnagram(s: string, t: string): boolean {
 
 console.log(isAnagram('anagram', 'nagaram'));
 
-function isAnagram(s, t) {
+function isAnagram2(s, t) {
   s = s.toLowerCase();
   t = t.toLowerCase();
 

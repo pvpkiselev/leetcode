@@ -78,6 +78,21 @@ if (!Array.prototype.myFlat) {
   };
 }
 
+// Flatten array
+const flattenArray = (arr) => {
+   let result = []
+   
+   arr.forEach((num) => {
+       if (Array.isArray(num)) {
+            result.push(...flattenArray(num))
+       } else {
+           result.push(num)
+       }
+   })
+   
+   return result
+}
+
 // console.log(
 //   [
 //     [1, 2, 3],

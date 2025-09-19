@@ -19,11 +19,11 @@ const object_types = [
   { id: 4, class: 'Кабели' }
 ];
 
-function objectsToString(objects, types) {
+function objectsToString(objects, object_types) {
   let resultString = '';
 
   for (let i = 0; i < objects.length; i++) {
-    if (types[objects[i].object_type].class === 'Устройства') {
+    if (object_types[objects[i].object_type].class === 'Устройства') {
       resultString += objects[i].name + ', ';
     }
   }
